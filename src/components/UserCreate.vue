@@ -1,20 +1,28 @@
 <template>
-  <div class='card card-body mt-4'>
-    <form @submit.prevent='onSubmit'>
-      <div class='form-group'>
-        <label>Name</label>
-        <input v-model='form.name' class='form-control' required />
+  <div class="card mt-4">
+    <form @submit.prevent="onSubmit">
+      <div class="field">
+        <label class="label">Name</label>
+        <div class="control">
+          <input v-model="form.name" class="input" required />
+        </div>
       </div>
-      <div class='form-group mt-3'>
-        <label>Email</label>
-        <input
-          v-model='form.email'
-          class='form-control'
-          type='email'
-          required
-        />
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+          <input
+            v-model="form.email"
+            class="input"
+            type="email"
+            required
+          />
+        </div>
       </div>
-      <button type='submit' class='btn btn-success mt-3'>Create User</button>
+      <div class="field">
+        <div class="control">
+          <button type="submit" class="button is-success">Create User</button>
+        </div>
+      </div>
     </form>
   </div>
 </template>
